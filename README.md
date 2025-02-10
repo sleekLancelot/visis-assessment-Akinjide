@@ -22,7 +22,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     adb devices
    ```
 
-4. Target on of the devices gotten with the command above
+4. Target one of the devices gotten with the command above
 
    ```bash
     adb -s <deviceId> reverse tcp:8081 tcp:8081
