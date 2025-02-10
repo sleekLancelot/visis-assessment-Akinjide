@@ -37,7 +37,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    or
 
    ```bash
-    npm run android
+    npx expo run:android
    ```
 
 Download an APK [here](https://drive.google.com/drive/folders/1PL1DMpdbynY3TYm_Hpb7LCRQjBe86c75?usp=sharing)
