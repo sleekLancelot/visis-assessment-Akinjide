@@ -37,7 +37,7 @@ export default function HomeScreen() {
       // aspect: [4, 3],
       quality: 1,
     });
-    console.log('imageResult', JSON.stringify(imageResult, null, 3));
+    // console.log('imageResult', JSON.stringify(imageResult, null, 3));
 
     if (!imageResult.canceled) {
       setImage(imageResult.assets[0].uri);
@@ -51,11 +51,11 @@ export default function HomeScreen() {
     try {
       const ocrResult = await TextRecognition.recognize(uri);
 
-      console.log('ocrResult:', JSON.stringify(ocrResult, null, 3))
+      // console.log('ocrResult:', JSON.stringify(ocrResult, null, 3))
       
       if (ocrResult?.text) {
         const extractedText = ocrResult?.text?.replaceAll('\n', ' ')
-        console.log('ocrResultText:', JSON.stringify(ocrResult?.text?.replaceAll('\n', ' '), null, 3))
+        // console.log('ocrResultText:', JSON.stringify(ocrResult?.text?.replaceAll('\n', ' '), null, 3))
         setRecognizedText(extractedText);
         fetchBookDetails(extractedText ?? "");
       }
@@ -73,7 +73,7 @@ export default function HomeScreen() {
 
       const res = await fetchResponse?.json()
 
-      console.log('fetched book details from Open Library API:', JSON.stringify(res, null, 3));
+      // console.log('fetched book details from Open Library API:', JSON.stringify(res, null, 3));
       if (res?.totalItems > 0 && Array.isArray(res?.items)) {
         const book = res?.items[0]?.volumeInfo;
         
@@ -106,7 +106,7 @@ export default function HomeScreen() {
             } :
             require('@/assets/images/henry-be-lc7xcWebECc-unsplash.jpg')
           }
-          defaultSource={require('@/assets/images/henry-be-lc7xcWebECc-unsplash.jpg')}
+          // defaultSource={require('@/assets/images/henry-be-lc7xcWebECc-unsplash.jpg')}
           style={styles.reactLogo}
         />
       }>
