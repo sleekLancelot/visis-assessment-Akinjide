@@ -10,10 +10,34 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Start the app
+2. Start the server
 
    ```bash
     npx expo start
+   ```
+
+3. Check the target android device
+
+   ```bash
+    adb devices
+   ```
+
+4. Target on of the devices gotten with the command above
+
+   ```bash
+    adb -s <deviceId> reverse tcp:8081 tcp:8081
+   ```
+
+5. Build and start the app on the targeted device
+
+   ```bash
+    npm run android
+   ```
+
+   or
+
+   ```bash
+    npm run android
    ```
 
 In the output, you'll find options to open the app in a
